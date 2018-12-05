@@ -276,8 +276,8 @@ def problem0b(n):
     ###########################################################################
     # ------------------------------------------------------------------
     count =0
-    for k in range (2, n+1, 1):
-        if(is_prime(k)==True):
+    for k in range (n-1):
+        if(is_prime(2+k)==True):
             count = count +1
     return (count)
 
