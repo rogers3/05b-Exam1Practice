@@ -184,7 +184,7 @@ def problem1a(m, n):
       -- If m is 30 and n is 100, the correct answer is about 1.278.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -193,8 +193,8 @@ def problem1a(m, n):
     #    TIME ESTIMATE:   10 minutes.
     # -------------------------------------------------------------------------
     total = 0
-    for k in range ((math.abs(n))^2-(math.abs(m))^2 + 1):
-        total = total + math.sin(m+k)
+    for k in range((abs(n))**2-(abs(m))**2+1):
+        total = total + math.sin(m**2+k)
     return total
 
 
