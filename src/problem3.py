@@ -97,11 +97,11 @@ def run_test_problem3a():
     print('       actual:  ', answer)
 
     # Test 5 (it is on window 3):
-    point = rg.Point(50, 70)
+    point = rg.Point(50, 170)
     expected = 25
     answer = problem3a(window3, point, 5)
     print()
-    print('Test 4 expected:', expected)
+    print('Test 5 expected:', expected)
     print('       actual:  ', answer)
 
     window3.close_on_mouse_click()
@@ -235,8 +235,16 @@ def problem3b(m, point1):
     #    DIFFICULTY:      8 or 9
     #    TIME ESTIMATE:   20 to 30 minutes.
     # -------------------------------------------------------------------------
+    total = 0
+    window = rg.RoseWindow(400, 650)
+    for k in range(m):
+        total=total+problem3a(window, rg.Point(point1.x, point1.y+60*k), 3+2*k)
+    window.render()
+    window.close_on_mouse_click()
+    return (total)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
 main()
+
